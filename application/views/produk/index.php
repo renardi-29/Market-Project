@@ -12,7 +12,7 @@
 
         </div>
 
-        <a href="#" class="btn-primary">
+        <a href="<?= site_url('produk/tambah'); ?>" class="btn-primary">
             + Tambah Produk
         </a>
 

@@ -12,4 +12,19 @@ class Produk_model extends CI_Model
             ->get()
             ->result();
     }
+
+    public function get_penjual()
+    {
+        return $this->db
+            ->where('role', 'penjual')
+            ->order_by('nama', 'ASC')
+            ->get('users')
+            ->result();
+    }
+
+    public function insert($data)
+    {
+        return $this->db
+            ->insert('produk', $data);
+    }
 }
