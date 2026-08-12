@@ -78,4 +78,10 @@ class Produk extends CI_Controller
 
         redirect('produk');
     }
+    public function delete($id)
+    {
+        $this->Produk_model->delete($id);
+
+        redirect('produk');
+    }
 }

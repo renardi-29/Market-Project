@@ -78,7 +78,9 @@
                                     Edit
                                 </a>
 
-                                <a href="#" class="btn-delete">
+                                <a href="<?= site_url('produk/delete/' . $item->id); ?>"
+                                    class="btn-delete"
+                                    onclick="return confirm('Apakah Anda yakin ingin menghapus produk ini?');">
                                     Hapus
                                 </a>
 

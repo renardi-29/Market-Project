@@ -42,4 +42,10 @@ class Produk_model extends CI_Model
             ->where('id', $id)
             ->update('produk', $data);
     }
+    public function delete($id)
+    {
+        return $this->db
+            ->where('id', $id)
+            ->delete('produk');
+    }
 }
