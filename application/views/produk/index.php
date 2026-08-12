@@ -74,7 +74,7 @@
 
                             <td>
 
-                                <a href="#" class="btn-edit">
+                                <a href="<?= site_url('produk/edit/' . $item->id); ?>" class="btn-edit">
                                     Edit
                                 </a>
 

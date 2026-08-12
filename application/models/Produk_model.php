@@ -22,9 +22,24 @@ class Produk_model extends CI_Model
             ->result();
     }
 
+    public function get_by_id($id)
+    {
+        return $this->db
+            ->where('id', $id)
+            ->get('produk')
+            ->row();
+    }
+
     public function insert($data)
     {
         return $this->db
             ->insert('produk', $data);
+    }
+
+    public function update($id, $data)
+    {
+        return $this->db
+            ->where('id', $id)
+            ->update('produk', $data);
     }
 }
