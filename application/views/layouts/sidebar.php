@@ -15,6 +15,9 @@
         <a href="<?= site_url('transaksi'); ?>">
             Transaksi
         </a>
+        <a href="<?= site_url('detail_transaksi'); ?>">
+            Detail Transaksi
+        </a>
 
     </nav>
 
