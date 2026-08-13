@@ -135,7 +135,33 @@
                             </td>
 
                             <td>
-                                <?= html_escape($item->status); ?>
+
+                                <?php if ($item->status === 'selesai'): ?>
+
+                                    <span class="status-badge status-success">
+                                        Selesai
+                                    </span>
+
+                                <?php elseif ($item->status === 'pending'): ?>
+
+                                    <span class="status-badge status-warning">
+                                        Pending
+                                    </span>
+
+                                <?php elseif ($item->status === 'batal'): ?>
+
+                                    <span class="status-badge status-danger">
+                                        Batal
+                                    </span>
+
+                                <?php else: ?>
+
+                                    <span class="status-badge status-default">
+                                        <?= html_escape($item->status); ?>
+                                    </span>
+
+                                <?php endif; ?>
+
                             </td>
 
                         </tr>
