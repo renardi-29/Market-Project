@@ -41,8 +41,10 @@ class Transaksi extends CI_Controller
     {
         $produk_id = $this->input->post('produk_id');
         $jumlah = $this->input->post('jumlah');
+        /** @var CI_DB_query_builder $db */
+        $db = $this->db;
 
-        $produk = $this->db
+        $produk = $db
             ->where('id', $produk_id)
             ->get('produk')
             ->row();
@@ -104,7 +106,10 @@ class Transaksi extends CI_Controller
         $produk_id = $this->input->post('produk_id');
         $jumlah = $this->input->post('jumlah');
 
-        $produk = $this->db
+        /** @var CI_DB_query_builder $db */
+        $db = $this->db;
+
+        $produk = $db
             ->where('id', $produk_id)
             ->get('produk')
             ->row();
