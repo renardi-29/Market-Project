@@ -8,7 +8,9 @@
         </p>
     </div>
 
-    <a href="#" class="btn-primary">
+    <a
+        href="<?= site_url('detail_transaksi/tambah'); ?>"
+        class="btn-primary">
         + Tambah Detail
     </a>
 
@@ -76,11 +78,20 @@
 
                         <td>
 
-                            <a href="#" class="btn-edit">
+                            <a
+                                href="<?= site_url(
+                                            'detail_transaksi/edit/' . $item->id
+                                        ); ?>"
+                                class="btn-edit">
                                 Edit
                             </a>
 
-                            <a href="#" class="btn-delete">
+                            <a
+                                href="<?= site_url(
+                                            'detail_transaksi/hapus/' . $item->id
+                                        ); ?>"
+                                class="btn-delete"
+                                onclick="return confirm('Yakin ingin menghapus detail transaksi ini?');">
                                 Hapus
                             </a>
 
