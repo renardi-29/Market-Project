@@ -68,7 +68,14 @@ class Transaksi extends CI_Controller
             'subtotal' => $subtotal
         ];
 
-        $this->Transaksi_model->insert($transaksi, $detail);
+        $result = $this->Transaksi_model->insert(
+            $transaksi,
+            $detail
+        );
+
+        if (!$result) {
+            show_error('Transaksi gagal disimpan. Pastikan stok produk mencukupi.');
+        }
 
         redirect('transaksi');
     }
@@ -133,11 +140,17 @@ class Transaksi extends CI_Controller
             'subtotal' => $subtotal
         ];
 
-        $this->Transaksi_model->update(
+        $result = $this->Transaksi_model->update(
             $id,
             $transaksi,
             $detail
         );
+
+        if (!$result) {
+            show_error(
+                'Transaksi gagal diperbarui. Pastikan stok produk mencukupi.'
+            );
+        }
 
         redirect('transaksi');
     }
