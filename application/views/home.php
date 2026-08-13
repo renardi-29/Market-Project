@@ -1,19 +1,76 @@
-<?php $this->load->view('layouts/header'); ?>
+<?php
 
-<?php $this->load->view('layouts/sidebar'); ?>
+/** @var int $total_produk */
+/** @var int $total_transaksi */
+/** @var int $total_penjual */
+/** @var int $total_pembeli */
+?>
+<div class="page-header">
 
-<main class="main-content">
+    <div class="page-header-info">
 
-    <h1>Dashboard</h1>
+        <h1>Dashboard</h1>
 
-    <p>
-        Selamat datang di Market Project.
-    </p>
+        <p>
+            Ringkasan data Market Project.
+        </p>
 
-    <p>
-        Sistem transaksi penjualan barang berbasis CodeIgniter 3.
-    </p>
+    </div>
 
-</main>
+</div>
 
-<?php $this->load->view('layouts/footer'); ?>
+
+<div class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-card-title">
+            Total Produk
+        </div>
+
+        <div class="dashboard-card-value">
+            <?= $total_produk; ?>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-card-title">
+            Total Transaksi
+        </div>
+
+        <div class="dashboard-card-value">
+            <?= $total_transaksi; ?>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-card-title">
+            Total Penjual
+        </div>
+
+        <div class="dashboard-card-value">
+            <?= $total_penjual; ?>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+        <div class="dashboard-card-title">
+            Total Pembeli
+        </div>
+
+        <div class="dashboard-card-value">
+            <?= $total_pembeli; ?>
+        </div>
+
+    </div>
+
+</div>

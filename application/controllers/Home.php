@@ -1,10 +1,35 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Dashboard_model');
+    }
+
+
     public function index()
     {
-        $this->load->view('home');
+        $data['title'] = 'Dashboard';
+
+        $data['total_produk'] =
+            $this->Dashboard_model->total_produk();
+
+        $data['total_transaksi'] =
+            $this->Dashboard_model->total_transaksi();
+
+        $data['total_penjual'] =
+            $this->Dashboard_model->total_penjual();
+
+        $data['total_pembeli'] =
+            $this->Dashboard_model->total_pembeli();
+
+
+        $this->load->view('layouts/header', $data);
+        $this->load->view('layouts/sidebar');
+        $this->load->view('home', $data);
+        $this->load->view('layouts/footer');
     }
 }

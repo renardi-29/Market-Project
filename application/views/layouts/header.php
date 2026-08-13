@@ -476,6 +476,36 @@
         .btn-cancel:hover {
             background: #d1d5db;
         }
+
+        /* =========================
+   DASHBOARD
+========================= */
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .dashboard-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .dashboard-card-title {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-card-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1f2937;
+        }
     </style>
 
 </head>
