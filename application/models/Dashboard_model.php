@@ -30,4 +30,21 @@ class Dashboard_model extends CI_Model
             ->where('role', 'pembeli')
             ->count_all_results('users');
     }
+    public function transaksi_terbaru()
+    {
+        return $this->db
+            ->select('
+            transaksi.*,
+            users.nama AS nama_pembeli
+        ')
+            ->from('transaksi')
+            ->join(
+                'users',
+                'users.id = transaksi.user_id'
+            )
+            ->order_by('transaksi.id', 'DESC')
+            ->limit(5)
+            ->get()
+            ->result();
+    }
 }

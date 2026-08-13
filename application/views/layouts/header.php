@@ -506,6 +506,33 @@
             font-weight: bold;
             color: #1f2937;
         }
+
+        /* =========================
+   DASHBOARD SECTION
+========================= */
+
+        .dashboard-section {
+            margin-top: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            margin: 0 0 6px 0;
+            font-size: 22px;
+            color: #1f2937;
+        }
+
+        .section-header p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+        }
     </style>
 
 </head>

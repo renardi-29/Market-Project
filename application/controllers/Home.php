@@ -26,6 +26,8 @@ class Home extends CI_Controller
         $data['total_pembeli'] =
             $this->Dashboard_model->total_pembeli();
 
+        $data['transaksi_terbaru'] =
+            $this->Dashboard_model->transaksi_terbaru();
 
         $this->load->view('layouts/header', $data);
         $this->load->view('layouts/sidebar');
