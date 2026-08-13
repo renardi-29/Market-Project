@@ -12,7 +12,7 @@
             Produk
         </a>
 
-        <a href="#">
+        <a href="<?= site_url('transaksi'); ?>">
             Transaksi
         </a>
 
